@@ -1,0 +1,50 @@
+name: ue901_emc  # Nom de l'environnement Conda
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # Version de Python
+  - python=3.10
+
+  # Bibliothèques pour Data Science
+  - pandas         # Analyse de données
+  - numpy          # Calculs scientifiques
+  - scipy          # Fonctions mathématiques et statistiques
+  - scikit-learn   # Machine learning et analyse statistique
+  - statsmodels    # Modélisation statistique avancée
+  - matplotlib     # Bibliothèque pour la création de graphiques
+  - seaborn        # Visualisation de données avec un style amélioré
+  - pathlib        # Manipulation des dossiers et fichiers
+
+  # Bibliothèques pour manipulation des données spatiales 
+  - geopandas      # Manipulation de données géospatiales vectorielles
+  - shapely        # Manipulation de géométries spatiales
+  - pyproj         # Gestion des systèmes de projection et des CRS
+  - fiona          # Lecture/écriture de formats géospatiaux (ex : shapefiles)
+  - rtree          # Indexation spatiale pour accélérer les requêtes géospatiales
+  - gdal           # Pour la manipulation de données géospatiales avancées
+  - rasterio       # Pour la manipulation de données rasters
+  - rasterstats    # Pour faire le calcul statistique de données rasters
+
+   # Outils pour l'analyse de réseau
+  - networkx  # Analyse de réseau, utile pour les isochrones
+  - momepy    # Analyse morphologique et de réseau
+
+  # Analyse Multicritère
+  - pysal          # Statistiques spatiales, utilisé dans l'analyse multicritère
+  - pyomo          # Optimisation et modélisation mathématique pour l'EMC
+
+  # Outils pour visualisation et cartographie de base
+  - folium         # Visualisation de cartes interactives (basé sur Leaflet)
+  - contextily     # Ajout de tuiles de fonds de cartes dans des plots (OpenStreetMap)
+  - descartes      # Visualisation des géométries dans matplotlib
+  - mapclassify    # Classification des données pour les cartes thématiques
+  - geoplot        # Outil pour créer des visualisations géospatiales
+  - osmnx          # Travail avec les données OpenStreetMap, y compris les réseaux routiers
+  
+  # Jupyter Notebook
+  - jupyterlab     # Interface de notebooks pour exécuter du code interactif
+
+  # Pip section pour les paquets non disponibles dans conda
+  - pip:
+    - ahpy  # Processus analytique hiérarchique (AHP) pour l'EMC
